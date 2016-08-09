@@ -7,16 +7,17 @@ what to name identifiers such as class, method, package, variable, constant, etc
 
 A class name should always starts with **an uppercase** letter and and should be **a noun** or **a noun phrase**.  
 
-:smiley:
+// Good names :smiley:
 ```java
-// Good names .
 public class Employee {
 }
 
 public class AsyncHttpClient {
 }
+```
 
-// Bad names.
+Bad names :angry:
+```java
 // From JDK1.2.
 public class NO_RESPONSE {
 }
