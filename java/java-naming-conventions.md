@@ -35,15 +35,15 @@ But bear in mind that we should be consitent with one convention throughout one 
 ### Best practices :smiley:
 ```java
 
-// From Apache
+// From Apache.
 public abstract class LifecycleBase implements Lifecycle {
 }
 
-// Learned from Spring
+// Learned from Spring.
 public abstract class FluentCollectionSupport<E> implements FluentCollection<E> {
 }
 
-// From JDK
+// From JDK.
 public abstract class AbstractCollection<E> implements Collection<E> {
 }
 
@@ -55,18 +55,18 @@ A concrete class implementing an interface should have specific nammes, otherwis
 
 ```java
 
-// From JDK, implementation class has a specific name with a specific implementation strategy
+// From JDK, implementation class has a specific name with a specific implementation strategy.
 public class ArrayBlockingQueue<E> extends AbstractQueue<E> implements BlockingQueue<E> {
 }
 
 public class LinkedBlockingDeque<E> extends AbstractQueue<E> implements BlockingDeque<E> {
 }
 
-// From Spring
+// From Spring.
 public final class DefaultSecurityFilterChain implements SecurityFilterChain {
 }
 
-// From Eclipse Collections
+// From Eclipse Collections.
 public final class MutableBagFactoryImpl implements MutableBagFactory {
 }
 
@@ -78,15 +78,15 @@ An interface names should also start with **an uppercase letter** and be *a noun
 
 ```java
 
-// From Spring
+// From Spring.
 public interface ApplicationContext {
 }
 
-// From JDK
+// From JDK.
 public interface Executor {
 }
 
-// Name is an adjective
+// Name is an adjective.
 public interface Runnable {
 }
 
@@ -100,11 +100,11 @@ Interface names should never start or end with prefixes like `I` or postfixes li
 ### Bad practices :angry:
 
 ```java
-// From Java Wordnet Interface Library (JWI) v2.4.0
+// From Java Wordnet Interface Library (JWI) v2.4.0.
 public interface IDictionary extends IHasVersion, IHasLifecycle, IHasCharset {
 }
 
-// From JDK
+// From JDK.
 public interface RepositoryIdInterface {
 }
 ```
