@@ -1,6 +1,6 @@
 # Java naming conventions
 
-Java naming conventions are a set of rules which were standardized and recommmended by Sun Microsystems, Inc to follow as we devicde 
+Java naming conventions are a set of rules which were recommmended to follow as we devicde 
 what to name identifiers such as class, method, package, variable, constant, etc.
 
 ## Class Name
@@ -49,7 +49,7 @@ public abstract class AbstractCollection<E> implements Collection<E> {
 
 ```
 
-A concrete class implementing an interface should have specific nammes, otherwise class name can start with prefix `Default` or end with postfix `Impl`
+A concrete class implementing an interface should have a specific name indicating its implementation strategy, otherwise class name can start with prefix `Default` or end with postfix `Impl`.
 
 ### Best practices :smiley:
 
@@ -95,7 +95,7 @@ public interface Iterable {
 
 ```
 
-Interface names should never start or end with prefixes like `I` or postfixes like `Interface`
+Interface names should never start or end with prefixes like `I` or postfixes like `Interface`.
 
 ### Bad practices :angry:
 
