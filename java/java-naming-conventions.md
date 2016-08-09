@@ -73,7 +73,7 @@ public final class MutableBagFactoryImpl implements MutableBagFactory {
 ```
 ## Interface Name
 
-An interface names should also start with **an uppercase letter** and be **a noun** or **a phrase noun** or an **adjective**
+An interface name should also start with **an uppercase letter** and be **a noun** or **a phrase noun** or an **adjective**
 ### Best practices :smiley:
 
 ```java
@@ -95,7 +95,7 @@ public interface Iterable {
 
 ```
 
-Interface name should never start or end with prefixes like `I` or postfixes like `Interface`.
+Interface names should never start or end with prefixes like `I` or postfixes like `Interface`.
 
 ### Bad practices :angry:
 
