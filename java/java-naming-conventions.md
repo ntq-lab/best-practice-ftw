@@ -5,7 +5,7 @@ what to name identifiers such as class, method, package, variable, constant, etc
 
 ## Class Name
 
-A class name should always starts with **an uppercase** letter and and should be **a noun** or **a noun phrase**.
+A class name should always starts with **an uppercase** letter and and should be **a noun** or **a noun phrase**.  :smiley:
 
 ```java
 // :smiley: Good names .
