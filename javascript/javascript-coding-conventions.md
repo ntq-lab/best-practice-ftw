@@ -128,9 +128,9 @@ console.log(myFunction()); // => Uncaught TypeError: Cannot read property 'name'
 ### Best practices
 ```javascript
 function myFunction(object) {
-	object = object || {};
+	var newObject = Object.assign({}, object); // Note: This method not support on Intener Explorer. I recommended you should be use external libraries (Ex: lodash, object-assign...)
 
-	return object.name;
+	return newObject.name;
 }
 
 console.log(myFunction()); // Undefined
@@ -159,4 +159,51 @@ function verify() {...}
 	// export to global
 	exports.verify = verify;
 })(window);
+```
+
+# 8. Use {} instead of new Object() and [] instead of new Array()
+
+* Shorter and more readable
+* Safer: literals will still work when the Array or Object constructors have been overridden
+
+### Bad practices
+```javascript
+function Array() {
+	return 1;
+}
+
+var arr = new Array();
+console.log(arr);
+```
+
+### Best practices
+```javascript
+var arr = [];
+console.log(arr);
+```
+
+* Faster
+
+### Bad practices
+```javascript
+var counter = 1e7;
+var arr;
+
+console.time('array time');
+for (var i = 0; i < counter; i++) {
+	arr = new Array();
+}
+console.timeEnd('array time'); // 132.071ms
+```
+
+### Best practices
+```javascript
+var counter = 1e7;
+var arr;
+
+console.time('array time');
+for (var i = 0; i < counter; i++) {
+	arr = [];
+}
+console.timeEnd('array time'); // 40.505ms
 ```
