@@ -1,22 +1,22 @@
-# 1. Use === instead of ==
+## 1. Use === instead of ==
 
 The == comparison operator always converts (to matching types) before comparison.
 
-### Bad practices
+#### Bad
 ```javascript
 0 == ''; // true
 1 == '1'; // true
 1 == true; // true
 ```
 
-### Best practices
+#### Good
 ```javascript
 0 === ''; // false
 1 === '1'; // false
 1 === true; // false
 ```
 
-# 2. Don't Use Short-Hand
+## 2. Don't Use Short-Hand
 
 Technically, you can get away with omitting most curly braces and semi-colons. Most browsers will correctly interpret the following:
 
@@ -52,18 +52,18 @@ if (someVariableExists) {
 anotherFunctionCall();
 ```
 
-# 3. Use JS Lint
+## 3. Use JS Lint
 
 ```bash
 "JSLint takes a JavaScript source and scans it. If it finds a problem, it returns a message describing the problem and an approximate location within the source. The problem is not necessarily a syntax error, although it often is. JSLint looks at some style conventions as well as structural problems. It does not prove that your program is correct. It just provides another set of eyes to help spot problems."
 - JSLint Documentation
 ```
 
-# 4. Place Scripts at the Bottom of Your Page
+## 4. Place Scripts at the Bottom of Your Page
 
 The primary goal is to make the page load as quickly as possible for the user. When loading a script, the browser can't continue on until the entire file has been loaded. Thus, the user will have to wait longer before noticing any progress.
 
-### Bad practices
+#### Bad
 ```javascript
 <html>
 	<head>
@@ -75,7 +75,7 @@ The primary goal is to make the page load as quickly as possible for the user. W
 </html>
 ```
 
-### Best practices
+#### Good
 ```javascript
 <html>
 	<head>
@@ -87,11 +87,11 @@ The primary goal is to make the page load as quickly as possible for the user. W
 </html>
 ```
 
-# 5. Declare Variables Outside of the For Statement
+## 5. Declare Variables Outside of the For Statement
 
 When executing lengthy "for" statements, don't make the engine work any harder than it must.
 
-### Bad practices
+#### Bad
 ```javascript
 for(var i = 0; i < someArray.length; i++) {
 	var container = document.getElementById('container');
@@ -99,7 +99,7 @@ for(var i = 0; i < someArray.length; i++) {
 }
 ```
 
-### Best practices
+#### Good
 ```javascript
 var container = document.getElementById('container');
 var length = someArray.length;
@@ -110,13 +110,13 @@ for(i = 0; i < length; i++) {
 }
 ```
 
-# 6. Use Parameter Defaults
+## 6. Use Parameter Defaults
 
 If a function is called with a missing argument, the value of the missing argument is set to undefined.
 
 Undefined values can break your code. It is a good habit to assign default values to arguments.
 
-### Bad practices
+#### Bad
 ```javascript
 function myFunction(object) {
 	return object.name;
@@ -125,7 +125,7 @@ function myFunction(object) {
 console.log(myFunction()); // => Uncaught TypeError: Cannot read property 'name' of undefined
 ```
 
-### Best practices
+#### Good
 ```javascript
 function myFunction(object) {
 	var newObject = Object.assign({}, object); // Note: This method not support on Intener Explorer. I recommended you should be use external libraries (Ex: lodash, object-assign...)
@@ -136,11 +136,11 @@ function myFunction(object) {
 console.log(myFunction()); // Undefined
 ```
 
-# 7. Avoid globals
+## 7. Avoid globals
 
 Global variables and function names are an incredibly bad idea. The reason is that every JavaScript file included in the page runs in the same scope. If you have global variables or functions in your code, scripts included after yours that contain the same variable and function names will overwrite your variables/functions.
 
-### Bad practices
+#### Bad
 ```javascript
 var current = null;
 function init() {...}
@@ -148,7 +148,7 @@ function change() {...}
 function verify() {...}
 ```
 
-### Best practices
+#### Good
 ```javascript
 (function(exports) {
 	var current = null;
@@ -161,12 +161,12 @@ function verify() {...}
 })(window);
 ```
 
-# 8. Use {} instead of new Object() and [] instead of new Array()
+## 8. Use {} instead of new Object() and [] instead of new Array()
 
 * Shorter and more readable
 * Safer: literals will still work when the Array or Object constructors have been overridden
 
-### Bad practices
+#### Bad
 ```javascript
 function Array() {
 	return 1;
@@ -176,7 +176,7 @@ var arr = new Array();
 console.log(arr);
 ```
 
-### Best practices
+#### Good
 ```javascript
 var arr = [];
 console.log(arr);
@@ -184,7 +184,7 @@ console.log(arr);
 
 * Faster
 
-### Bad practices
+#### Bad
 ```javascript
 var counter = 1e7;
 var arr;
@@ -196,7 +196,7 @@ for (var i = 0; i < counter; i++) {
 console.timeEnd('array time'); // 132.071ms
 ```
 
-### Best practices
+#### Good
 ```javascript
 var counter = 1e7;
 var arr;
