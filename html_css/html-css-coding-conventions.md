@@ -81,12 +81,12 @@ It gives a consistency also.
 
 #### Bad
 ```html
-<a HREF="http://w3schools.com">W3schools</A>
+<input type="text" name="q" disabled="disabled">
 ```
 
 #### Good
 ```html
-<a href="http://w3schools.com">W3schools</a>
+<input type="text" name="q" disabled>
 ```
 
 ## 7. Add `title` element
