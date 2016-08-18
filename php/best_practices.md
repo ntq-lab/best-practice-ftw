@@ -199,8 +199,10 @@ if ($pos === false) {
 
 ### 7. Chunk for bulk processing
 - When process large data you might face out of memory problem
-=> Break data to chunks and process each chunk
-=> Suitable for console command
+
+  => Break data to chunks and process each chunk
+
+  => Suitable for console command
 
 ```php
     /**
