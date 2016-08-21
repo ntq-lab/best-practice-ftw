@@ -5,7 +5,7 @@ The == comparison operator always converts (to matching types) before comparison
 #### Bad
 ```javascript
 0 == ''; // true
-1 == '1'; // true
+1 == '1'; // trueJ
 1 == true; // true
 ```
 
@@ -86,6 +86,14 @@ The primary goal is to make the page load as quickly as possible for the user. W
 	</body>
 </html>
 ```
+#### Other trick
+In some cases, if you do not want to move script tag to bottom of page, consider to use async and defer attribute in script tag.
+
+```
+<script src="scripts.js" async></script>
+<script src="scripts.js" defer></script>
+```
+Note: async and defer attribute only support IE10+;
 
 ## 5. Declare Variables Outside of the For Statement
 
