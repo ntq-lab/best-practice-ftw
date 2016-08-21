@@ -5,7 +5,7 @@ The == comparison operator always converts (to matching types) before comparison
 #### Bad
 ```javascript
 0 == ''; // true
-1 == '1'; // trueJ
+1 == '1'; // true
 1 == true; // true
 ```
 
