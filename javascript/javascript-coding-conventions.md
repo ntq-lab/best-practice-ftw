@@ -86,6 +86,16 @@ The primary goal is to make the page load as quickly as possible for the user. W
 	</body>
 </html>
 ```
+#### Other trick
+In some cases, if you do not want to move script tag to bottom of page, consider to use async and defer attribute in script tag.
+
+```
+<script src="example.js" async></script>
+<script src="example.js" defer></script>
+```
+To understand how to use async and defer, please read more: http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html
+
+Note: defer attribute does not support <= IE9;
 
 ## 5. Declare Variables Outside of the For Statement
 
