@@ -28,7 +28,6 @@ Local variable|Camel|Similar to _**Private field**_|i, selectedColor
 Refer MSND [Naming Guidelines](https://msdn.microsoft.com/en-us/library/ms229002(v=vs.110).aspx)
 
 ## Layout Conventions
-Good layout uses formatting to emphasize the structure of your code and to make the code easier to read. Microsoft examples and samples conform to the following conventions:
 * Use the default Code Editor settings (smart indenting, four-character indents, tabs saved as spaces).
 * Write only one statement per line.
 * Write only one declaration per line.
@@ -37,7 +36,7 @@ string firstName;
 string lastName;
 int age;
 ```
-Above code snipet may be change later to:
+Above code snipet may be changed later to:
 ```C#
 string firstName = GetFirstName(userName);
 string lastName = GetLastName(userName);
