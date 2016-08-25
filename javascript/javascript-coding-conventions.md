@@ -217,3 +217,37 @@ for (var i = 0; i < counter; i++) {
 }
 console.timeEnd('array time'); // 40.505ms
 ```
+
+## 9. Return the same datatype in one function
+
+#### Bad
+```javascript
+function getUser(userId) {
+	if (!userId) {
+		return;
+	}
+
+	return new User({
+		userId: userId,
+	});
+}
+
+var user = getUser();
+user.fetch(); // Uncaught TypeError: Cannot read property 'fetch' of undefined
+```
+
+#### Good
+```javascript
+function getUser(userId) {
+	if (!userId) {
+		return new User();
+	}
+
+	return new User({
+		userId: userId,
+	});
+}
+
+var user = getUser();
+user.fetch();
+```
