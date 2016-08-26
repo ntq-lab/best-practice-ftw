@@ -217,3 +217,39 @@ for (var i = 0; i < counter; i++) {
 }
 console.timeEnd('array time'); // 40.505ms
 ```
+
+## 9. Return the same datatype in one function
+
+#### Bad
+```javascript
+function getUser(userId) {
+	if (!userId) {
+		return null;
+	}
+
+	return new User({
+		userId: userId,
+	}).fetch();
+}
+
+getUser().then(function() {...}); // Uncaught TypeError: Cannot read property 'then' of undefined
+```
+
+#### Good
+```javascript
+function getUser(userId) {
+	var deferred = Promise.defer();
+
+	if (userId) {
+		deferred.resolve(new User({
+			userId: userId,
+		}).fetch());
+	} else {
+		deferred.reject();
+	}
+
+	return deferred.promise;
+}
+
+getUser().then(function() {...});
+```
