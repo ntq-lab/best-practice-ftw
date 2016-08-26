@@ -217,39 +217,3 @@ for (var i = 0; i < counter; i++) {
 }
 console.timeEnd('array time'); // 40.505ms
 ```
-
-## 9. Return the same datatype in one function
-
-#### Bad
-```javascript
-function getUser(userId) {
-	if (!userId) {
-		return;
-	}
-
-	return db.getUserById(userId);
-}
-
-getUser().then(function(user) {
-	// work with user
-});
-// Uncaught TypeError: Cannot read property 'then' of undefined
-```
-
-#### Good
-```javascript
-function getUser(userId) {
-	if (!userId) {
-		return Promise.reject(new Error('userId could not be undefined or null'));
-	}
-
-	return db.getUserById(userId);
-}
-
-getUser().then(function(user) {
-	// work with user
-}, function(error) {
-	// handle error
-});
-
-```
