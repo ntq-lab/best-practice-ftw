@@ -227,27 +227,29 @@ function getUser(userId) {
 		return;
 	}
 
-	return new User({
-		userId: userId,
-	});
+	return db.getUserById(userId);
 }
 
-var user = getUser();
-user.fetch(); // Uncaught TypeError: Cannot read property 'fetch' of undefined
+getUser().then(function(user) {
+	// work with user
+});
+// Uncaught TypeError: Cannot read property 'then' of undefined
 ```
 
 #### Good
 ```javascript
 function getUser(userId) {
 	if (!userId) {
-		return new User();
+		return Promise.reject(new Error('userId could not be undefined or null'));
 	}
 
-	return new User({
-		userId: userId,
-	});
+	return db.getUserById(userId);
 }
 
-var user = getUser();
-user.fetch();
+getUser().then(function(user) {
+	// work with user
+}, function(error) {
+	// handle error
+});
+
 ```
