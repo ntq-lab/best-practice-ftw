@@ -97,7 +97,7 @@ To understand how to use async and defer, please read more: http://www.growingwi
 
 Note: defer attribute does not support <= IE9;
 
-## 5. Declare Variables Outside of the For Statement
+## 5. Leave unnessary logic outside of the `For` statement
 
 When executing lengthy "for" statements, don't make the engine work any harder than it must.
 
