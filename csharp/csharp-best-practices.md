@@ -1,15 +1,15 @@
 # C# Best practices
 
-:+1: Prefer 'using' keyword when accessing native resources (file, DB connection, socket, mutex and so on)
+# Prefer 'using' keyword when accessing native resources (file, DB connection, socket, mutex and so on)
 
-__Bad practice__
+:-1:__Bad practice__
 ```C#
 var fs = new FileStream("Data.bin", FileMode.Create);
 fs.Write(...);
 fs.Write(...);
 fs.Dispose(); <== 'fs' may not close if an exception occurs in above statements.
 ```
-__Better practice__
+:+1:__Better practice__
 ```C#
 using (var fs = new FileStream("Data.bin", FileMode.Create))
 {
@@ -29,15 +29,15 @@ using (var writer = new StreamWriter("dest file"))
 }
 ```
 
-:+1: Prefer 'as' operator when casting *reference* type
+# Prefer 'as' operator when casting *reference* type
 
-__Bad practice__
+:-1:__Bad practice__
 ```C#
 object obj = GetPeopleById(id);
-Student s = (Student)obj;  <== casting may throw exception if 'obj' cannot cast to Student type.
+Student s = (Student)obj;  <== throw exception if 'obj' cannot cast to Student type.
 Console.Write(s.ClassName);
 ```
-__Better practice__
+:+1:__Better practice__
 ```C#
 object obj = GetPeopleById(id);
 Student s = obj as Student;  <== return 'null' if 'obj' cannot cast to Student type.
@@ -56,14 +56,14 @@ is equivalent to:
 Student s = obj is Student ? (Student)obj : (Student)null;
 ```
 
-:+1: LINQ - for - foreach: Prefer LINQ because source will be
+# Prefer LINQ over for/foreach
+With LINQ, source code will be:
 - Shorter, readable, 
 - Focus on what you want than how to do
 - Prevent unexpected side-effects to source collection
 - Performance is better in most cases
 
-
-__Bad practice__
+:-1:__Bad practice__
 ```C#
 // Copy from Pronexus.IFRS project
 public IfrsLinkDataInfo GetLinkData(int id)
@@ -98,7 +98,7 @@ public IfrsLinkDataInfo GetLinkData(int id)
 }
 
 ```
-__Better practice__
+:+1:__Better practice__
 
 ```C#
 // Source code after refactoring
