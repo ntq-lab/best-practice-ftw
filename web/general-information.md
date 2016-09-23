@@ -1,5 +1,5 @@
 # Reduce HTTP requests
-## Resouce Bundle
+## Resource Bundle
 ## Image CSS Sprites
 ## Lazy-load images
 
