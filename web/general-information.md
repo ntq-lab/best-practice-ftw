@@ -37,7 +37,7 @@
 ### NewRelic
 
 # Use Progressive JPEGs
-## For better UX (in my opion)
+## Baseline vs. Progressive
 ## grunt-contrib-imagemin
 
 # Critical rendering path
