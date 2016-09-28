@@ -8,13 +8,17 @@
 ## Gzip
 ## Minify
 ## Thumbnails
-## Optimize JSON
+### graphicmagick
+## Optimize response
+### JSON
+### HTML
+### Client-side render
 
 # Stay behind a Proxy
 ## Better control
 ## Failover
 ## Load balancer
-## Reduce server load
+## Reduce application server work
 ## Development vs Deployment
 
 # Take advantage of quality tools
@@ -22,8 +26,8 @@
 ## Webmaster's tools
 
 # Use Progressive JPEGs
-## Why
-## graphicmagick
+## For better UX (in my opion)
+## grunt-contrib-imagemin
 
 # Critical rendering path
 ## Because users are impatient
