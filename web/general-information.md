@@ -15,11 +15,14 @@
 ### Client-side render
 
 # Stay behind a Proxy
+## NGINX
 ## Better control
 ## Failover
 ## Load balancer
 ## Reduce application server work
 ## Development vs Deployment
+### Cache Control
+### SSL
 
 # Take advantage of quality tools
 ## Lint tools
