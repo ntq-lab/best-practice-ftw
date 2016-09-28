@@ -23,7 +23,15 @@
 
 # Take advantage of quality tools
 ## Lint tools
+### CSS Lint
+### JSHint & JSLint
+
 ## Webmaster's tools
+### Google PageSpeed Insight
+### Google Webmasters
+### Google Analytics
+### YSlow
+### NewRelic
 
 # Use Progressive JPEGs
 ## For better UX (in my opion)
