@@ -3,12 +3,13 @@
 ## Image CSS Sprites
 ## Lazy-load images
 ## Cache everything
+## CDN
 
 # Reduce payload
 ## Gzip
 ## Minify
 ## Thumbnails
-### graphicmagick
+### [graphicmagick](http://www.graphicsmagick.org/)
 ## Optimize response
 ### JSON
 ### HTML
@@ -26,22 +27,31 @@
 
 # Take advantage of quality tools
 ## Developer's tools
-### Google Chrome inspection
+### [Google Chrome DevTools](https://developer.chrome.com/devtools)
+### [Firebug](https://addons.mozilla.org/en-US/firefox/addon/firebug/)
 
 ## Lint tools
-### CSS Lint
-### JSHint & JSLint
+### [CSS Lint](http://csslint.net/)
+#### [Grunt plugin](https://www.npmjs.com/package/grunt-contrib-csslint)
+### [JSLint & JSHint](http://www.jslint.com/)
+#### [Grunt plugin](https://www.npmjs.com/package/grunt-contrib-jshint)
 
 ## Webmaster's tools
 ### Google PageSpeed Insight
 ### Google Webmasters
-### Google Analytics
-### YSlow
-### NewRelic
+### [Google Analytics](https://support.google.com/analytics/answer/1008015?hl=en)
+### [YSlow](http://yslow.org/)
+### [NewRelic](https://newrelic.com/why-new-relic)
 
 # Use Progressive JPEGs
 ## Baseline vs. Progressive
-## grunt-contrib-imagemin
+### Demostration
+#### [Video 1](https://www.youtube.com/watch?v=oItMsmZ995I)
+#### [Video 2](https://www.youtube.com/watch?v=TOc15-2apY0)
+### [Explaination]
+## [grunt-contrib-imagemin](https://www.npmjs.com/package/grunt-contrib-imagemin)
 
 # Critical rendering path
-## Because users are impatient
+## [What is this](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en)
+## Tools
+### [Grunt Critical](https://www.npmjs.com/package/grunt-critical)
