@@ -25,6 +25,9 @@
 ### SSL
 
 # Take advantage of quality tools
+## Developer's tools
+### Google Chrome inspection
+
 ## Lint tools
 ### CSS Lint
 ### JSHint & JSLint
