@@ -48,8 +48,9 @@
 ### Demostration
 #### [Video 1](https://www.youtube.com/watch?v=oItMsmZ995I)
 #### [Video 2](https://www.youtube.com/watch?v=TOc15-2apY0)
-### [Explaination]
-## [grunt-contrib-imagemin](https://www.npmjs.com/package/grunt-contrib-imagemin)
+### [Explaination](https://www.wired.com/2013/01/the-return-of-the-progressive-jpeg/)
+## Tools
+### [grunt-contrib-imagemin](https://www.npmjs.com/package/grunt-contrib-imagemin)
 
 # Critical rendering path
 ## [What is this](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en)
